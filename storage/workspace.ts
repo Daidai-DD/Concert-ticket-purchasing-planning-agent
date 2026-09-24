@@ -1,0 +1,5 @@
+import { emptyWorkspace, workspaceSchema, type Workspace } from '../domain/workspace';
+export const STORAGE_KEY='encore.workspace.v2';
+export interface StorageAdapter {getItem(key:string):string|null;setItem(key:string,value:string):void}
+export function readWorkspace(storage:StorageAdapter,language:string):Workspace{const raw=storage.getItem(STORAGE_KEY);return raw?workspaceSchema.parse(JSON.parse(raw)):emptyWorkspace(language);}
+export function writeWorkspace(storage:StorageAdapter,next:Workspace,expectedRevision:number){const current=storage.getItem(STORAGE_KEY);if(current&&workspaceSchema.parse(JSON.parse(current)).revision!==expectedRevision)throw new Error('storage-conflict');const checked=workspaceSchema.parse({...next,revision:expectedRevision+1}) as Workspace;storage.setItem(STORAGE_KEY,JSON.stringify(checked));return checked;}
