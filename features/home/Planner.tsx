@@ -8,7 +8,7 @@ import {PlanCard,labels} from '@/components/PlanCard';
 import {changeOption,toggleLock,total,kinds,type Plan,type Kind,type Requirements} from '@/domain/plan';
 import {upsertTask,type Task,type ConversationMessage} from '@/domain/workspace';
 import {catalogFor,providerFor} from '@/providers/mock';
-import {artists,cityData,noticeProvider,toCny,exchangeRates,type Concert} from '@/providers/catalog';
+import {artists,noticeProvider,toCny,exchangeRates,type Concert} from '@/providers/catalog';
 import {replyWithRemoteAgent} from '@/services/remote-agent';
 import {useWorkspace} from '../workspace/WorkspaceContext';
 import EventsPage from '../events/EventsPage';

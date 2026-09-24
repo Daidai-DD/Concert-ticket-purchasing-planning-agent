@@ -7,7 +7,7 @@ export const mockRouteProvider:RouteProvider={async query(places,mode,fail=false
 // Production adapters should use Maps JS maps3d, Places and server-backed Routes.
 export class GoogleMapProvider implements MapProvider{
  async loadCities():Promise<typeof cityData>{throw new Error('google-not-configured');}
- async places(_plan:Plan):Promise<MapPlace[]>{throw new Error('google-not-configured');}
- async focus(_place:MapPlace):Promise<void>{throw new Error('google-not-configured');}
+ async places(_plan:Plan):Promise<MapPlace[]>{void _plan;throw new Error('google-not-configured');}
+ async focus(_place:MapPlace):Promise<void>{void _place;throw new Error('google-not-configured');}
 }
-export class GoogleRouteProvider implements RouteProvider{async query(_places:MapPlace[],_mode:RouteMode):Promise<MockRoute[]>{throw new Error('google-not-configured');}}
+export class GoogleRouteProvider implements RouteProvider{async query(_places:MapPlace[],_mode:RouteMode):Promise<MockRoute[]>{void _places;void _mode;throw new Error('google-not-configured');}}

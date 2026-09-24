@@ -19,7 +19,7 @@ const minimal=await mockAgent.reply('重新规划',reduced.requirements,reduced.
 assert.equal(providerFor('北京').metadata.source,'China Mock Provider');assert.equal(providerFor('东京').metadata.source,'Global Mock Provider');
 const unsupported=await mockAgent.reply('我想从上海去巴黎看 ASTER，预算6000元',{});assert.equal(unsupported.plan,undefined);
 console.log('PASS: parsing, follow-up, generation, budget, 4 card locks, date conflicts, optimization, providers, unavailable data');
-const {emptyWorkspace,upsertTask}=await import(pathToFileURL(resolve(root,'domain/workspace.mjs')));
+const {upsertTask}=await import(pathToFileURL(resolve(root,'domain/workspace.mjs')));
 const {readWorkspace,writeWorkspace,STORAGE_KEY}=await import(pathToFileURL(resolve(root,'storage/workspace.mjs')));
 const {discoveryProvider,venueProvider,noticeProvider,money,toCny}=await import(pathToFileURL(resolve(root,'providers/catalog.mjs')));
 const {mockMapProvider,mockRouteProvider,GoogleMapProvider}=await import(pathToFileURL(resolve(root,'providers/maps.mjs')));

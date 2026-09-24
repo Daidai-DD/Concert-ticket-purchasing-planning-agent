@@ -1,13 +1,8 @@
-# Local server secrets. Copy to .dev.vars and fill only the providers you use.
+# Local server configuration. Copy to .dev.vars and fill only the providers you use.
 ZHIPU_API_KEY=
-ZHIPU_MODEL=glm-4.7-flash
+ZHIPU_MODEL=
 QWEN_API_KEY=
-QWEN_MODEL=qwen3.7-flash
-# Paste the API Host shown when the key was created. Legacy Beijing fallback:
-QWEN_BASE_URL=https://dashscope.aliyuncs.com/compatible-mode/v1
-
-# Baidu Maps JavaScript API browser key. Protect it with a Referer allowlist.
+QWEN_MODEL=
+QWEN_BASE_URL=
 BAIDU_MAP_AK=
-
-# Ticketmaster Discovery API consumer key. Kept on the server.
 TICKETMASTER_API_KEY=
