@@ -87,6 +87,12 @@ Mock 演出、城市、艺人、票档与场馆结构主要位于 `providers/cat
 
 任务、提示和设置保存在浏览器 `localStorage` 的 `encore.workspace.v2` 中。清除站点数据会删除这些内容，目前没有云端同步或备份。
 
+## 产品展示
+
+<img width="2864" height="1656" alt="image" src="https://github.com/user-attachments/assets/5528f495-6621-46b5-be95-8e8c9f643c1a" />
+<img width="2864" height="1656" alt="image" src="https://github.com/user-attachments/assets/f727deeb-d8c8-483d-96b6-6e6579bcedbb" />
+<img width="2832" height="1656" alt="image" src="https://github.com/user-attachments/assets/6b854c92-483e-4d52-8f78-508d56d3f4d7" />
+
 ## 已知限制
 
 - Ticketmaster 覆盖范围和字段完整度取决于其开放数据；不可用时使用明确标注的演示数据。
